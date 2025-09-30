@@ -140,8 +140,8 @@ function App() {
       <section id="about" className="pt-24 pb-80 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-light mb-4">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">ABOUT ME</span>
+            <h2 className="text-2xl sm:text-3xl font-light mb-4">
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">ABOUT ME</span>
             </h2>
           </div>
 
@@ -194,7 +194,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-light mb-4">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">RESUME</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">RESUME</span>
             </h2>
             <div className="mt-6">
               <a
@@ -273,7 +273,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-light mb-4">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">CERTIFICATIONS</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">CERTIFICATIONS</span>
             </h2>
           </div>
 
@@ -298,7 +298,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-light mb-4">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">PORTFOLIO</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">PORTFOLIO</span>
             </h2>
           </div>
 
@@ -358,7 +358,7 @@ function App() {
           {/* 3D Section */}
           <div className="mt-16">
             <h3 className="text-2xl font-light text-center mb-12">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">3D MODELS</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">3D MODELS</span>
             </h3>
 
             <div className="max-w-4xl mx-auto mb-8">
@@ -389,7 +389,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-light mb-4">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2">LET'S TALK</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">LET'S TALK</span>
             </h2>
           </div>
 
