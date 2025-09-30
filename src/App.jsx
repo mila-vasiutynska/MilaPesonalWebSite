@@ -365,7 +365,7 @@ function App() {
           {/* 3D Pipeline Projects Section */}
           <div>
             <h3 className="text-2xl font-light text-center mb-12">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">3D PIPELINE PROJECTS</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">3D DATA PIPELINE PROJECTS</span>
             </h3>
 
             <div className="max-w-4xl mx-auto mb-8">
