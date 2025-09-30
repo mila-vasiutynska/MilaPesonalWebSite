@@ -1,8 +1,75 @@
-import React from 'react'
+import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import mountainsImage from '/public/mountains.png'
 import personalImage from '/public/mila.jpg'
 
 function App() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [isLoading, setIsLoading] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
+  const [showError, setShowError] = useState(false)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      setShowError(true)
+      setTimeout(() => setShowError(false), 5000)
+      return
+    }
+
+    setIsLoading(true)
+    setShowError(false)
+    setShowSuccess(false)
+
+    try {
+      // EmailJS configuration
+      const result = await emailjs.send(
+        'service_ew4yi3g', // Your EmailJS service ID
+        'template_067ycoc', // Your EmailJS template ID
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          subject: formData.subject || 'Website Contact Form',
+          message: formData.message,
+          to_name: 'Mila',
+        },
+        'zjhe-3e5yh_Vk49cF' // Your EmailJS public key
+      )
+
+      setShowSuccess(true)
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+      setTimeout(() => setShowSuccess(false), 5000)
+    } catch (error) {
+      console.error('Email sending failed:', error)
+      setShowError(true)
+      setTimeout(() => setShowError(false), 5000)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Navigation */}
@@ -326,10 +393,27 @@ function App() {
           </div>
 
           <div className="max-w-md mx-auto">
-            <form className="space-y-6">
+            {/* Success Message */}
+            {showSuccess && (
+              <div className="mb-6 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400 text-center">
+                Thank you! Your message has been sent successfully.
+              </div>
+            )}
+
+            {/* Error Message */}
+            {showError && (
+              <div className="mb-6 p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400 text-center">
+                Please fill in all required fields or try again later.
+              </div>
+            )}
+
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
                   placeholder="First Name*"
                   className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
                 />
@@ -337,6 +421,9 @@ function App() {
               <div>
                 <input
                   type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
                   placeholder="Last Name*"
                   className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
                 />
@@ -344,6 +431,9 @@ function App() {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="Email*"
                   className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
                 />
@@ -351,6 +441,9 @@ function App() {
               <div>
                 <input
                   type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   placeholder="Subject"
                   className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
                 />
@@ -358,15 +451,19 @@ function App() {
               <div>
                 <textarea
                   rows="4"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder="Message*"
                   className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors resize-none"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-pink-500 text-white px-8 py-3 rounded-md hover:bg-pink-600 transition-colors font-medium"
+                disabled={isLoading}
+                className="bg-pink-500 text-white px-8 py-3 rounded-md hover:bg-pink-600 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                SEND
+                {isLoading ? 'SENDING...' : 'SEND'}
               </button>
             </form>
           </div>
