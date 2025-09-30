@@ -25,6 +25,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log('Form submitted')
 
     // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
