@@ -302,63 +302,70 @@ function App() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
-              <div className="h-48 bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                  <p className="text-sm font-medium">AI Detection</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-white mb-2">AI Data Hackathon</h3>
-                <p className="text-pink-400 text-sm mb-3">Python • 2025</p>
-                <p className="text-gray-300 mb-4">Detecting landmines from drone images using YOLO object recognition. Team placed 7th out of 15 participants.</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7357930235415183360/" className="text-pink-400 hover:text-pink-300 transition-colors">Read LinkedIn Post →</a>
-              </div>
-            </div>
+          {/* Data Projects Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-light text-center mb-12">
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">DATA PROJECTS</span>
+            </h3>
 
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <p className="text-sm font-medium">Healthcare ML</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                <div className="h-48 bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <p className="text-sm font-medium">AI Detection</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-medium text-white mb-2">AI Data Hackathon</h3>
+                  <p className="text-pink-400 text-sm mb-3">Python • 2025</p>
+                  <p className="text-gray-300 mb-4">Detecting landmines from drone images using YOLO object recognition. Team placed 7th out of 15 participants.</p>
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7357930235415183360/" className="text-pink-400 hover:text-pink-300 transition-colors">Read LinkedIn Post →</a>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-white mb-2">CIBMTR - Equity in Post-HCT Survival</h3>
-                <p className="text-pink-400 text-sm mb-3">Python • 2025</p>
-                <p className="text-gray-300 mb-4">Analysed transplant patient data and developed predictive models to enhance accuracy and equity in survival predictions.</p>
-                <a href="https://www.kaggle.com/competitions/equity-post-HCT-survival-predictions/overview" className="text-pink-400 hover:text-pink-300 transition-colors">View Details →</a>
-              </div>
-            </div>
 
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
-              <div className="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                  </svg>
-                  <p className="text-sm font-medium">Marketing Analytics</p>
+              <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <p className="text-sm font-medium">Healthcare ML</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-medium text-white mb-2">CIBMTR - Equity in Post-HCT Survival</h3>
+                  <p className="text-pink-400 text-sm mb-3">Python • 2025</p>
+                  <p className="text-gray-300 mb-4">Analysed transplant patient data and developed predictive models to enhance accuracy and equity in survival predictions.</p>
+                  <a href="https://www.kaggle.com/competitions/equity-post-HCT-survival-predictions/overview" className="text-pink-400 hover:text-pink-300 transition-colors">View Details →</a>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-white mb-2">Bellabeat Case Study</h3>
-                <p className="text-pink-400 text-sm mb-3">R • 2024</p>
-                <p className="text-gray-300 mb-4">Conducted exploratory data analysis on smart device usage to inform marketing strategy and generate actionable insights.</p>
-                <a href="https://www.kaggle.com/code/milavasiutynska/bellabeat-case-study?scriptVersionId=199182821" className="text-pink-400 hover:text-pink-300 transition-colors">View Analysis →</a>
+
+              <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                <div className="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                    </svg>
+                    <p className="text-sm font-medium">Marketing Analytics</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-medium text-white mb-2">Bellabeat Case Study</h3>
+                  <p className="text-pink-400 text-sm mb-3">R • 2024</p>
+                  <p className="text-gray-300 mb-4">Conducted exploratory data analysis on smart device usage to inform marketing strategy and generate actionable insights.</p>
+                  <a href="https://www.kaggle.com/code/milavasiutynska/bellabeat-case-study?scriptVersionId=199182821" className="text-pink-400 hover:text-pink-300 transition-colors">View Analysis →</a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* 3D Section */}
-          <div className="mt-16">
+          {/* 3D Pipeline Projects Section */}
+          <div>
             <h3 className="text-2xl font-light text-center mb-12">
-              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">3D MODELS</span>
+              <span className="text-pink-400 border-b-2 border-pink-400 pb-2 whitespace-nowrap">3D PIPELINE PROJECTS</span>
             </h3>
 
             <div className="max-w-4xl mx-auto mb-8">
