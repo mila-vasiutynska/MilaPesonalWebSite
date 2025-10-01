@@ -77,11 +77,11 @@ function App() {
       <nav className="bg-gray-800/80 backdrop-blur-sm fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-center h-16">
-            <div className="flex items-center space-x-12">
-              <a href="#about" className="text-gray-300 hover:text-pink-400 transition-colors text-sm tracking-wider uppercase">About Me</a>
-              <a href="#resume" className="text-gray-300 hover:text-pink-400 transition-colors text-sm tracking-wider uppercase">Resume</a>
-              <a href="#portfolio" className="text-gray-300 hover:text-pink-400 transition-colors text-sm tracking-wider uppercase">Portfolio</a>
-              <a href="#contact" className="text-gray-300 hover:text-pink-400 transition-colors text-sm tracking-wider uppercase">Contact</a>
+            <div className="flex items-center space-x-4 sm:space-x-8 md:space-x-12">
+              <a href="#about" className="text-gray-300 hover:text-pink-400 transition-colors text-xs sm:text-sm tracking-wider uppercase whitespace-nowrap">About</a>
+              <a href="#resume" className="text-gray-300 hover:text-pink-400 transition-colors text-xs sm:text-sm tracking-wider uppercase whitespace-nowrap">Resume</a>
+              <a href="#portfolio" className="text-gray-300 hover:text-pink-400 transition-colors text-xs sm:text-sm tracking-wider uppercase whitespace-nowrap">Portfolio</a>
+              <a href="#contact" className="text-gray-300 hover:text-pink-400 transition-colors text-xs sm:text-sm tracking-wider uppercase whitespace-nowrap">Contact</a>
             </div>
           </div>
         </div>
